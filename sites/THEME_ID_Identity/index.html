@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<!--  THEME_ID=IDENTITY -->
+
+<html>
+	
+<head>
+<!-- [MAIN_TITLE] -->
+	<title>{{MAIN_TITLE}}</title>
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+	
+<body class="is-loading">
+	<div id="wrapper">
+		<section id="main">
+			<header>
+<!-- [PROFIL_PICTURE_SOURCE_URL] -->
+				<span class="avatar"><img src="{{PROFIL_PICTURE_SOURCE_URL}}" alt="" /></span>
+				
+<!-- [MAIN_TITLE] -->
+				<h1>{{MAIN_TITLE}}</h1>
+				
+<!-- [MAIN_CONTENT] -->
+				<p>{{MAIN_CONTENT}}</p>
+				
+			</header>
+		
+<!-- [BUTTON_URL] -->
+<!-- [BUTTON_NAME] -->
+			<p><a href="{{BUTTON_URL}}" class="button">{{BUTTON_NAME}} ></a></p>
+			<br>
+			
+<!-- [SOCIAL_NETWORKS_URL] -->
+			<footer>
+				<ul class="icons">
+					<li><a href="{{SOCIAL_INSTAGRAM}}" class="fa-instagram">Instagram</a></li>
+					<li><a href="{{SOCIAL_FACEBOOK}}" class="fa-facebook">Facebook</a></li>
+					<li><a href="{{SOCIAL_YOUTUBE}}" class="fa-youtube">YouTube</a></li>
+					<li><a href="{{SOCIAL_TWITTER}}" class="fa-twitter">Twitter</a></li>
+					<li><a href="{{SOCIAL_SNAPCHAT}}" class="fa-snapchat">Snapchat</a></li>
+					<li><a href="{{SOCIAL_GITHUB}}" class="fa-github">Github</a></li>
+					<li><a href="{{SOCIAL_LINKEDIN}}" class="fa-linkedin">LinkedIn</a></li>
+				</ul>
+			</footer>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="copyright">
+				
+<!-- [DO_NOT_TOUCH] -->
+				<li><a href="http://firepress.org/"> — Ask us </a>about your website.</li>
+			</ul>
+		</footer>
+	</div>
+	
+	<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+	<script>
+		if ('addEventListener' in window) {
+			window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+			document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+		}
+	</script>
+</body>
+</html>
