@@ -39,13 +39,13 @@
 <!-- [SOCIAL_NETWORKS_URL] -->
 			<footer>
 				<ul class="icons">
-					<li><a href="{{SOCIAL_INSTAGRAM}}" class="fa-instagram">Instagram</a></li>
-					<li><a href="{{SOCIAL_FACEBOOK}}" class="fa-facebook">Facebook</a></li>
-					<li><a href="{{SOCIAL_YOUTUBE}}" class="fa-youtube">YouTube</a></li>
-					<li><a href="{{SOCIAL_TWITTER}}" class="fa-twitter">Twitter</a></li>
-					<li><a href="{{SOCIAL_SNAPCHAT}}" class="fa-snapchat">Snapchat</a></li>
-					<li><a href="{{SOCIAL_GITHUB}}" class="fa-github">Github</a></li>
-					<li><a href="{{SOCIAL_LINKEDIN}}" class="fa-linkedin">LinkedIn</a></li>
+					{% if SOCIAL_INSTAGRAM != 'null' %}<li><a href="{{SOCIAL_INSTAGRAM}}" class="fa-instagram">Instagram</a></li>{% endif %}
+					{% if SOCIAL_FACEBOOK != 'null' %}<li><a href="{{SOCIAL_FACEBOOK}}" class="fa-facebook">Facebook</a></li>{% endif %}
+					{% if SOCIAL_YOUTUBE != 'null' %}<li><a href="{{SOCIAL_YOUTUBE}}" class="fa-youtube">YouTube</a></li>{% endif %}
+					{% if SOCIAL_TWITTER != 'null' %}<li><a href="{{SOCIAL_TWITTER}}" class="fa-twitter">Twitter</a></li>{% endif %}
+					{% if SOCIAL_SNAPCHAT != 'null' %}<li><a href="{{SOCIAL_SNAPCHAT}}" class="fa-snapchat">Snapchat</a></li>{% endif %}
+					{% if SOCIAL_GITHUB != 'null' %}<li><a href="{{SOCIAL_GITHUB}}" class="fa-github">Github</a></li>{% endif %}
+					{% if SOCIAL_LINKEDIN != 'null' %}<li><a href="{{SOCIAL_LINKEDIN}}" class="fa-linkedin">LinkedIn</a></li>{% endif %}
 				</ul>
 			</footer>
 		</section>
