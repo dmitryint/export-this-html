@@ -56,6 +56,6 @@ open -a "Google Chrome" index.html
 sleep 1
 
 # Git commit changes
-#git add -A
-#git commit -m "$DEPLOY_ID HTML export"
-#git push; sleep 2;
+git add -A
+git commit -m "$DEPLOY_ID HTML export"
+git push; sleep 2;
