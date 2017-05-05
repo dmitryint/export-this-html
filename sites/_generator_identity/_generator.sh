@@ -24,20 +24,20 @@ cd $HTMLEXPORT_PROJECT_PATH; \
 pwd; ls -AlhF; du -sh; echo; \
 
 
-# Copy template
-rm -rf $HTML_FINAL_OUTPUT; \
-mkdir $HTML_FINAL_OUTPUT; \
-cp -R -v $TEMPLATE_ID_PATH/. $HTML_FINAL_OUTPUT/. ; \
-rm $HTML_FINAL_OUTPUT/index.html; \
-rm $HTML_FINAL_OUTPUT/README.md; \
-
+rm -rf $HTML_FINAL_OUTPUT
+mkdir -p $HTML_FINAL_OUTPUT
 
 # Get variables from url:
 python3 run.py --url=$URL_TO_PARSE --out-file=$STATIC_CONTENT_PATH; \
 cat $STATIC_CONTENT_PATH; \
 
-eval $(cat ${$STATIC_CONTENT_PATH} |grep THEME_ID)
+eval $(cat ${STATIC_CONTENT_PATH} |grep THEME_ID)
 TEMPLATE_ID_PATH=$GITLAB_LOCAL_REPO/THEME_ID_${THEME_ID}
+
+# Copy template
+cp -R -v $TEMPLATE_ID_PATH/. $HTML_FINAL_OUTPUT/. ; \
+rm $HTML_FINAL_OUTPUT/index.html; \
+rm $HTML_FINAL_OUTPUT/README.md; \
 
 # Generate html from template:
 FILES="*.html *.css"
