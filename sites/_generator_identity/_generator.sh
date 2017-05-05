@@ -8,11 +8,9 @@ URL_TO_PARSE=http://pascalandy.com/blog/landingpage_data_v2/
 #
 #
 #
-TEMPLATE_ID=THEME_ID_Identity
 HTMLEXPORT_PROJECT_PATH=/Users/p_andy/Documents/_pascalandy/11_FirePress/GitLab/firepress-static_grp/22-all-in/_generator_identity
 STATIC_CONTENT_PATH=/Users/p_andy/Documents/_pascalandy/11_FirePress/GitLab/firepress-static_grp/22-all-in/$DEPLOY_ID/static_content_env
 GITLAB_LOCAL_REPO=/Users/p_andy/Documents/_pascalandy/11_FirePress/GitLab/firepress-static_grp/22-all-in
-TEMPLATE_ID_PATH=$GITLAB_LOCAL_REPO/$TEMPLATE_ID
 HTML_FINAL_OUTPUT=$GITLAB_LOCAL_REPO/$DEPLOY_ID
 #
 #
@@ -38,12 +36,18 @@ rm $HTML_FINAL_OUTPUT/README.md; \
 python3 run.py --url=$URL_TO_PARSE --out-file=$STATIC_CONTENT_PATH; \
 cat $STATIC_CONTENT_PATH; \
 
+eval $(cat ${$STATIC_CONTENT_PATH} |grep THEME_ID)
+TEMPLATE_ID_PATH=$GITLAB_LOCAL_REPO/THEME_ID_${THEME_ID}
 
 # Generate html from template:
-python3 generate_from_template.py \
-	--template=$TEMPLATE_ID_PATH/index.html \
-	--env=$STATIC_CONTENT_PATH >$HTML_FINAL_OUTPUT/index.html ;
-
+FILES="*.html *.css"
+for p in $FILES; do
+    for f in $(cd ${TEMPLATE_ID_PATH} && find . -name ${p} | cut -c 3-); do
+        python3 generate_from_template.py \
+            --template=$TEMPLATE_ID_PATH/${f} \
+            --env=$STATIC_CONTENT_PATH >$HTML_FINAL_OUTPUT/${f}
+    done
+done
 
 # Preview the HTML file
 sleep 1; \
