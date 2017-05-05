@@ -8,9 +8,9 @@ URL_TO_PARSE=http://pascalandy.com/blog/landingpage_data_v2/
 #
 #
 #
-HTMLEXPORT_PROJECT_PATH=/Users/p_andy/Documents/_pascalandy/11_FirePress/GitLab/firepress-static_grp/22-all-in/_generator_identity
-STATIC_CONTENT_PATH=/Users/p_andy/Documents/_pascalandy/11_FirePress/GitLab/firepress-static_grp/22-all-in/$DEPLOY_ID/static_content_env
-GITLAB_LOCAL_REPO=/Users/p_andy/Documents/_pascalandy/11_FirePress/GitLab/firepress-static_grp/22-all-in
+HTMLEXPORT_PROJECT_PATH="/Users/dima/Desktop/Upwork/Pascal Andy/export-this-html/sites/_generator_identity"
+STATIC_CONTENT_PATH="/Users/dima/Desktop/Upwork/Pascal Andy/export-this-html/sites/$DEPLOY_ID/static_content_env"
+GITLAB_LOCAL_REPO="/Users/dima/Desktop/Upwork/Pascal Andy/export-this-html/sites"
 HTML_FINAL_OUTPUT=$GITLAB_LOCAL_REPO/$DEPLOY_ID
 #
 #
